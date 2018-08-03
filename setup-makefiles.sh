@@ -21,7 +21,7 @@ set -e
 DEVICE=tiffany
 VENDOR=xiaomi
 
-INITIAL_COPYRIGHT_YEAR=2018
+INITIAL_COPYRIGHT_YEAR=2017-2018
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -42,9 +42,9 @@ setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT"
 # Copyright headers and guards
 write_headers
 
-write_makefiles "$MY_DIR"/proprietary-files.txt
+write_makefiles "$MY_DIR"/proprietary-files.txt ture
 echo "" >> "$PRODUCTMK"
-write_makefiles "$MY_DIR"/proprietary-files-qc.txt
+write_makefiles "$MY_DIR"/proprietary-files-qc.txt ture
 
 # Finish
 write_footers
